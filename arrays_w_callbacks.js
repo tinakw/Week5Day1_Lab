@@ -192,17 +192,132 @@
 //  isPanagram
 //  Using the following array - test whether each letter a-z (case insensitive) is used at least once
  
- //const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog'];
-//let panagramToString = panagram.slice()
- function getMaxCount(string) {
+ const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog'];
+
+function getMaxCount(string) {
     const histogram = {};
-    for(let i = 0; i<string.length; i++){
-        const char = string[i];
+    let foo=string.toLowerCase();
+    for(let i = 0; i<foo.length; i++){
+        const char = foo[i];
         if (!histogram[char]) {
           histogram[char] = 0;
+        }
+        histogram[char]++;
     }
-    histogram[char]++;
-}
     return histogram;
+} 
 
-} console.log(getMaxCount("The quick brown fox jumps over the lazy dog");
+console.log(getMaxCount("The quick brown fox jumps over the lazy dog")); ////+++++++++Code Not Working???
+
+//----------------------------------------------------------------
+// Working with Data
+// filter for products with a price that is less than 10, using the array below:
+// sort alphabetically by product name
+
+// const products = [
+//       {
+//         "name": "allen wrench",
+//         "price": 2.99,
+//         "description": "handy tool"
+//       },
+//       {
+//         "name": "cornucopia",
+//         "price": 5.99,
+//         "description": "festive holiday decoration"
+//       },
+//       {
+//         "name": "banana",
+//         "price": 0.99,
+//         "description": "full of potassium"
+//       },
+//       {
+//         "name": "guillotine (cigar)",
+//         "price": 10.59,
+//         "description": "behead your stub"
+//       },
+//       {
+//         "name": "jack-o-lantern",
+//         "price": 3.99,
+//         "description": "spooky seasonal fun"
+//       },
+//       {
+//         "name": "doggie treat (box)",
+//         "price": 5.99,
+//         "description": "fido loves 'em"
+//       },
+//       {
+//         "name": "egg separator",
+//         "price": 3.99,
+//         "description": "it separates yolks from whites"
+//       },
+//       {
+//         "name": "LED lightbulb",
+//         "price": 6.55,
+//         "description": "It's super-efficient!"
+//       },
+//       {
+//         "name": "owl pellets",
+//         "price": 3.99,
+//         "description": "Don't ask what they used to be."
+//       },
+//       {
+//         "name": "flag",
+//         "price": 5.99,
+//         "description": "catches the breeze"
+//       },
+//       {
+//         "name": "hair brush",
+//         "price": 6.99,
+//         "description": "fine boar bristles"
+//       },
+//       {
+//         "name": "iridium (one gram)",
+//         "price": 19.36,
+//         "description": "corrosion-resistant metal"
+//       },
+//       {
+//         "name": "quark",
+//         "price": 0.01,
+//         "description": "Very small"
+//       },
+//       {
+//         "name": "turtleneck",
+//         "price": 19.99,
+//         "description": "available in black and slightly-darker black"
+//       },
+//       {
+//         "name": "kaleidoscope",
+//         "price": 8.25,
+//         "description": "tube with moving plastic pieces inside"
+//       },
+//       {
+//         "name": "mitt (leather)",
+//         "price": 15,
+//         "description": "regulation sized"
+//       },
+//       {
+//         "name": "nothing",
+//         "price": 10,
+//         "description": "Hey, if you pay us, we won't ask any questions."
+//       },
+//       {
+//         "name": "violin",
+//         "price": 2000,
+//         "description": "Talk about a JS fiddle..."
+//       },
+//       {
+//         "name": "yoyo",
+//         "price": 1,
+//         "description": "We had to pull some strings to get this one in."
+//       },
+//       {
+//         "name": "pincushion",
+//         "price": 1.99,
+//         "description": "You'll get 'stuck' on it"
+//       },
+//     ]
+
+    // const productsUnderTen = products.filter(product => product.price < 10.00); 
+    // console.log(productsUnderTen); // this works!
+
+//     console.log(products.sort((a,b)=>a.name.localeCompare(b.name)))
