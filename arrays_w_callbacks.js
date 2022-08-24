@@ -147,7 +147,7 @@
 
 // nums.sort((a,b)=> a - b);
 // console.log(nums) // output
-// [
+// [git 
 //     0, 1, 2, 3, 4,
 //     5, 6, 7, 8, 9,
 //    10
@@ -192,11 +192,17 @@
 //  isPanagram
 //  Using the following array - test whether each letter a-z (case insensitive) is used at least once
  
- const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog'];
+ //const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog'];
+//let panagramToString = panagram.slice()
+ function getMaxCount(string) {
+    const histogram = {};
+    for(let i = 0; i<string.length; i++){
+        const char = string[i];
+        if (!histogram[char]) {
+          histogram[char] = 0;
+    }
+    histogram[char]++;
+}
+    return histogram;
 
-//  const letterResults = panagram.reduce((tally, val) => {
-//  if (tally[val]) {tally[val]++  
-//  } else {
-//     tally[val] = 1;
-//  } return tally
-// }, {})
+} console.log(getMaxCount("The quick brown fox jumps over the lazy dog");
